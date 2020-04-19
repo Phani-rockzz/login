@@ -1,0 +1,19 @@
+﻿{%  extends 'phani/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1>please login</h1>
+    <form action="{% url 'phani:user_login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">username:</label>
+        <input type="text" name="username" placeholder="enter username"/>
+
+         <label for="password">password:</label>
+        <input type="password" name="password" placeholder="enter password"/>
+
+        <input type="submit" name="" value="login"/> 
+
+
+    </form>
+</div>
+
+{% endblock %}
